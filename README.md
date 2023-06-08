@@ -17,7 +17,9 @@ In between the navigation,
 - boot-up the next page behind the scenes (i.e. pre-* techniques)
 - …then, conduct hard navigation, instantly & seamlessly
 
-Check out the View Transition article for more details: https://developer.chrome.com/docs/web-platform/view-transitions/
+Check out the View Transition article for more details:
+- https://developer.chrome.com/docs/web-platform/view-transitions/
+- Specific to MPA transition: https://github.com/WICG/view-transitions/blob/main/explainer.md#cross-document-same-origin-transitions
 
 ## Disclaimer
 This code base is built for demo purpose only (non production ready code). Please reference as one example of how View Transitions API can be used.
