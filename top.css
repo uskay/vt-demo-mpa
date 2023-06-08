@@ -1,0 +1,268 @@
+:root {
+  --root-bg-color: #202124;
+  --main-bg-color: #d1d5d7;
+  --material-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+  --text-overlay-bg: black;
+  --text-color-light: #606060;
+  --header-bg-color-tokyo: #00657F;
+  --header-bg-color-kyoto: #AF6F5D;
+  --header-bg-color-yokohama: #080623;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: Segoe UI, system-ui, -apple-system, sans-serif;
+  background-color: var(--main-bg-color);
+  max-width: 600px;
+}
+
+html {
+  background-color: var(--root-bg-color);
+}
+
+body {
+  margin-left: calc(50vw - 50%);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-image: url('https://cdn.glitch.global/afc22f58-7717-45b3-9b3e-545c2c472195/top1.jpg');
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--material-box-shadow);
+
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-overlay-bg);
+    opacity: 0.3;
+    top: 0px;
+    left: 0px;
+  }
+
+  & h1 {
+    position: relative;
+    color: white;
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 100;
+}
+
+.trending-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .trending {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+
+    &>div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trending-name {
+      text-align: center;
+      margin-top: 10px;
+      color: var(--text-color-light);
+    }
+
+    .clickable {
+      cursor: pointer;
+    }
+  }
+}
+
+/* Separate this so that it can be used in the cloned node */
+.trending-img>img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.cards {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  & div {
+    width: 80%;
+  }
+
+  .card-container {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+    .card-img {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .card-img img {
+      width: 100%;
+    }
+
+    .card-desc {
+      padding: 10px 10px 30px 10px;
+    }
+
+    .card-details {
+      color: #606060;
+    }
+  }
+}
+
+/* Styles for VT */
+@container style(--theme: tokyo) {
+  .transition-bg-from, .transition-bg {
+    background-color: var(--header-bg-color-tokyo);
+  }
+}
+
+@container style(--theme: kyoto) {
+  .transition-bg-from, .transition-bg {
+    background-color: var(--header-bg-color-kyoto);
+  }
+}
+
+@container style(--theme: yokohama) {
+  .transition-bg-from, .transition-bg {
+    background-color: var(--header-bg-color-yokohama);
+  }
+}
+
+
+.transition-bridge-container {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .transition-bg {
+    position: relative;
+    width: 2500px;
+    height: 2500px;
+    border-radius: 50%;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    view-transition-name: transition-bg;
+
+    .trigger-clone-container {
+      position: relative;
+
+      .trigger-clone {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        view-transition-name: transition-trigger;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+      }
+
+      .circles {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        z-index: 98;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        top: -50%;
+        left: -50%;
+
+        & div {
+          animation: growAndFade 3s infinite ease-out;
+          background-color: white;
+          border-radius: 50%;
+          height: 100%;
+          opacity: 0;
+          position: absolute;
+          width: 100%;
+        }
+
+        .circle1 {
+          animation-delay: 0s;
+        }
+
+        .circle2 {
+          animation-delay: 1s;
+        }
+
+        .circle3 {
+          animation-delay: 2s;
+        }
+      }
+    }
+
+  }
+}
+
+.transition-bg-from {
+  border-radius: 50%;
+  position: absolute;
+}
+
+@keyframes growAndFade {
+  0% {
+    opacity: 0.25;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+::view-transition-group(transition-bg) {
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(.09, .67, .06, 1.03);
+  border-radius: 50%;
+  z-index: 97;
+}
+
+::view-transition-group(transition-trigger) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(.09, .67, .06, 1.03);
+  z-index: 99;
+}
+
+::view-transition-old(*),
+::view-transition-new(*) {
+  /* Make the height the same as the group,
+  meaning the view size might not match its aspect-ratio. */
+  height: 100%;
+}

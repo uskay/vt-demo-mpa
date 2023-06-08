@@ -1,0 +1,63 @@
+{
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "name": "vt-demo-mpa",
+  "description": "This is a demo of using the [View Tranisions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) in MPA page navigation patterns. For example, create an app launcher like transition and prerender the next page while showing a bridge state. Note: As of Jun 8 2023, this MPA view transition requires chrome://flags#view-transition-on-navigation to be enabled.",
+  "version": "1.0.0",
+  "main": "index.html",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "call-bind": "^1.0.2",
+    "async": "^2.6.4",
+    "ansi-styles": "^4.3.0",
+    "color-convert": "^2.0.1",
+    "chalk": "^4.1.2",
+    "color-name": "^1.1.4",
+    "corser": "^2.0.1",
+    "debug": "^3.2.7",
+    "eventemitter3": "^4.0.7",
+    "follow-redirects": "^1.15.2",
+    "get-intrinsic": "^1.2.1",
+    "has": "^1.0.3",
+    "has-flag": "^4.0.0",
+    "he": "^1.2.0",
+    "function-bind": "^1.1.1",
+    "has-proto": "^1.0.1",
+    "http-proxy": "^1.18.1",
+    "has-symbols": "^1.0.3",
+    "lodash": "^4.17.21",
+    "mime": "^1.6.0",
+    "iconv-lite": "^0.6.3",
+    "html-encoding-sniffer": "^3.0.0",
+    "minimist": "^1.2.8",
+    "mkdirp": "^0.5.6",
+    "ms": "^2.1.3",
+    "portfinder": "^1.0.32",
+    "object-inspect": "^1.12.3",
+    "safer-buffer": "^2.1.2",
+    "opener": "^1.5.2",
+    "safe-buffer": "^5.1.2",
+    "side-channel": "^1.0.4",
+    "qs": "^6.11.2",
+    "secure-compare": "^3.0.1",
+    "requires-port": "^1.0.0",
+    "union": "^0.5.0",
+    "url-join": "^4.0.1",
+    "supports-color": "^7.2.0",
+    "whatwg-encoding": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uskay/vt-demo-mpa.git"
+  },
+  "author": "Yusuke Utsunomiya",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/uskay/vt-demo-mpa/issues"
+  },
+  "homepage": "https://github.com/uskay/vt-demo-mpa#readme"
+}

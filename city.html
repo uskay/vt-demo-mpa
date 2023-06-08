@@ -1,0 +1,49 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="view-transition" content="same-origin" />
+<link rel="stylesheet" href="./city.css">
+<div class="global-header">
+  <span class="global-header-title">Visit Japan</span>
+  <div class="back">◀️</div>
+</div>
+<div class="header-container">
+  <div class="header">
+    <div class="header-img"></div>
+    <div class="header-title"></div>
+  </div>
+</div>
+<div class="article-container">
+  <div class="article">
+    <h2>About the city</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book.</p>
+    <div class="article-img"></div>
+    <h2>Where to visit</h2>
+    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+      literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+      College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+      going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+  </div>
+</div>
+<script src="./city.js"></script>
+<script>
+window.__log = [];
+__log.push(`document.prerendering: ${document.prerendering}`);
+if (document.prerendering) {
+  document.addEventListener('prerenderingchange', evt => {
+    const activationStart = performance.getEntriesByType('navigation')[0].activationStart;
+    __log.push(`prerenderingchange (i.e. activated) - document.prerendering: ${document.prerendering} / activationStart: ${activationStart}`);
+  });  
+}
+window.addEventListener('load', evt => {
+  __log.push(`load - document.prerendering: ${document.prerendering}`);
+});
+window.addEventListener('pageshow', evt => {
+  __log.forEach(log => {
+    console.log(log);
+  });
+});
+</script>
