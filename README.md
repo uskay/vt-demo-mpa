@@ -19,7 +19,7 @@ In between the navigation,
 
 Check out the View Transition article for more details:
 - https://developer.chrome.com/docs/web-platform/view-transitions/
-- Specific to MPA transition: https://github.com/WICG/view-transitions/blob/main/explainer.md#cross-document-same-origin-transitions
+- Specific to MPA transition: https://github.com/WICG/view-transitions/blob/main/cross-doc-explainer.md
 
 ## Disclaimer
 This code base is built for demo purpose only (non production ready code). Please reference as one example of how View Transitions API can be used.
