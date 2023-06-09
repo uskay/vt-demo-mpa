@@ -28,7 +28,7 @@ This code base is built for demo purpose only (non production ready code). Pleas
 Thank you for your amazing & beautiful photos @ unsplash.com !
 - [@jezar](https://unsplash.com/@jezar)
 - [@jaison333](https://unsplash.com/@jaison333)
-- [@boontohhgraphy]https://unsplash.com/@boontohhgraphy
+- [@boontohhgraphy](https://unsplash.com/@boontohhgraphy)
 - [@missle](https://unsplash.com/@missle)
 - [@tianshu](https://unsplash.com/@tianshu)
 - [@willxli](https://unsplash.com/@willxli)
