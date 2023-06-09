@@ -24,6 +24,22 @@ Check out the View Transition article for more details:
 ## Disclaimer
 This code base is built for demo purpose only (non production ready code). Please reference as one example of how View Transitions API can be used.
 
+## Credits
+Thank you for your amazing & beautiful photos @ unsplash.com !
+- [@jezar](https://unsplash.com/@jezar)
+- [@jaison333](https://unsplash.com/@jaison333)
+- [@boontohhgraphy]https://unsplash.com/@boontohhgraphy
+- [@missle](https://unsplash.com/@missle)
+- [@tianshu](https://unsplash.com/@tianshu)
+- [@willxli](https://unsplash.com/@willxli)
+- [@ultratunafish](https://unsplash.com/@ultratunafish)
+- [@danrang](https://unsplash.com/@danrang)
+- [@kokit1202](https://unsplash.com/@kokit1202)
+- [@superidol](https://unsplash.com/@superidol)
+- [@hiro0718](https://unsplash.com/@hiro0718)
+- [@sunillnaik](https://unsplash.com/@sunillnaik)
+- [@ary_heic](https://unsplash.com/@ary_heic)
+
 ---
 
 License Apache-2.0
