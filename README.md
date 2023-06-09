@@ -1,4 +1,4 @@
-# View Transition API Demo
+# View Transition API Demo (MPA)
 This is a demo of using the [View Tranisions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) in MPA page navigation patterns. For example, create an app launcher like transition and prerender the next page while showing a bridge state.
 Note: As of Jun 8 2023, this MPA view transition requires chrome://flags#view-transition-on-navigation to be enabled.
 
