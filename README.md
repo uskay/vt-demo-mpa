@@ -10,7 +10,7 @@ Note: As of Jun 8 2023, this MPA view transition requires chrome://flags#view-tr
 ## How?
 Food for thought... for example:
 
-![vt-under-the-hood](https://cdn.glitch.global/afc22f58-7717-45b3-9b3e-545c2c472195/vt-under-the-hood.png?v=1686230588005)
+![vt-under-the-hood](https://cdn.glitch.global/afc22f58-7717-45b3-9b3e-545c2c472195/vt-under-the-hood.png)
 
 In between the navigation,
 - transition to a “bridge state” highlighting the shared element
