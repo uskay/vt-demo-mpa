@@ -77,19 +77,12 @@ let url = '';
       // In reality, we could use this period to wait for the
       // next page to boot up (e.g. via prerendering)
       setTimeout(async _ => {
-        transition = document.startViewTransition(_ => {
-          // remove all temporary stuff
-          location.href = `/city.html?${cityName}`;
-        });
-        try {
-          await transition.finished;
-        } finally {
-          window.addEventListener('pageshow', _ => {
-            thingsToCleanUp.forEach(elm => {
-              elm.parentNode.removeChild(elm);
-            });
+        location.href = `/city.html?${cityName}`;
+        window.addEventListener('pageshow', _ => {
+          thingsToCleanUp.forEach(elm => {
+            elm.parentNode.removeChild(elm);
           });
-        }
+        });
       }, cityName === 'tokyo' ? 2000 : 1500);
     }
   });

@@ -33,13 +33,7 @@ articleImg.appendChild(imgLarge);
 headerTitle.appendChild(h1);
 document.documentElement.style.setProperty('--theme', `${cityName}`);
 const backToTop = _ => {
-  if (!document.startViewTransition) {
-    location.href = '/';
-    return;
-  }
-  document.startViewTransition(_ => {
-    location.href = '/';
-  });
+  location.href = '/';
 }
 document.querySelector('.back').addEventListener('click', _ => {
   backToTop();
